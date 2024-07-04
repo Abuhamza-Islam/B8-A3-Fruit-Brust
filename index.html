@@ -272,47 +272,151 @@
     </header>
     <!-- header end -->
     <!-- main start here -->
-    <main class="container max-auto  m-auto">
+    <main class="container max-auto m-auto">
       <!-- deal section start -->
-         <section class="mt-32">
-             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between bg-white text-black">
-              <div>
-                  <h1 class="text-3xl font-semibold">Deal of the day</h1>
-                  <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
-                    Latin literature from 45 BC, making it over 2000 years old.</p>
+      <section class="mt-32">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between bg-white text-black"
+        >
+          <div>
+            <h1 class="text-3xl font-semibold">Deal of the day</h1>
+            <p>
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+          <!-- countdown -->
+          <div class="flex lg:justify-end">
+            <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value: 15"></span>
+                </span>
+                days
               </div>
-              <!-- countdown -->
-              <div class="flex lg:justify-end">
-                <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-                  <div class="flex flex-col">
-                    <span class="countdown font-mono text-5xl">
-                      <span style="--value:15;"></span>
-                    </span>
-                    days
-                  </div>
-                  <div class="flex flex-col">
-                    <span class="countdown font-mono text-5xl">
-                      <span style="--value:10;"></span>
-                    </span>
-                    hours
-                  </div>
-                  <div class="flex flex-col">
-                    <span class="countdown font-mono text-5xl">
-                      <span style="--value:24;"></span>
-                    </span>
-                    min
-                  </div>
-                  <div class="flex flex-col">
-                    <span class="countdown font-mono text-5xl">
-                      <span style="--value:${counter};"></span>
-                    </span>
-                    sec
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value: 10"></span>
+                </span>
+                hours
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value: 24"></span>
+                </span>
+                min
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value:${counter};"></span>
+                </span>
+                sec
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- deal section end -->
+      <!-- deal card section start -->
+      <section class="bg-white text-black">
+        <!-- card 1 start -->
+        <div class="card shadow-xl bg-red-500">
+          <figure class="px-10 pt-10">
+            <img
+              src="images/fruit1.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <hr class="text-black font-extrabold" />
+            <h3>Apple</h3>
+            <!-- ratings start -->
+            <div class="rating">
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                checked="checked"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+              />
+            </div>
+            <!-- ratings end -->
+            <!-- details button start -->
+            <div class="card-actions">
+              <!-- Open the modal using ID.showModal() method -->
+              <button class="btn" onclick="my_modal_5.showModal()">
+                open modal
+              </button>
+              <dialog
+                id="my_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box bg-white">
+                 <!-- modal content start-->
+                 <div class="card bg-neutral text-neutral-content">
+                  <div class="card-body items-center text-center">
+                    <img src="images/fruit5.png" alt="apple">
+                    <h2 class="card-title">12.90$ - 18.85$</h2>
+                    <hr>
+                    <h3>Apples</h3>
+                    <!-- modal ratings start -->
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked="checked" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                     <!-- modal ratings end -->
+                    <div class="card-actions flex items-end justify-center">
+                      <div>
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                      <div class="modal-action">
+                        <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn">Close</button>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-             </div>
-         </section>
-      <!-- deal section end -->
+                  <!-- modal content end -->  
+                </div>
+              </dialog>
+            </div>
+            <!-- details button start -->
+          </div>
+        </div>
+        <!-- card 1 end -->
+      </section>
+      <!-- deal card section end -->
     </main>
     <!-- main end here -->
   </body>
